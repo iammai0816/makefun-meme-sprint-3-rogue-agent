@@ -40,7 +40,6 @@ def main() -> int:
         return 1
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    os.chmod(out_dir, 0o755)
     dst = os.path.join(out_dir, "entry.png")
     shutil.copyfile(SRC, dst)
     os.chmod(dst, 0o644)
